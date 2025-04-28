@@ -21,6 +21,7 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         Button btnLayout = (Button) findViewById(R.id.btnTabLayout);
+        Button btnCamera = (Button) findViewById(R.id.btnCamera);
 
         // Menggunakan Toolbar sebagai AppBar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -34,6 +35,14 @@ public class Dashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent hubungkankelayout = new Intent(getApplicationContext(), TabLayout.class);
+                startActivity(hubungkankelayout);
+            }
+        });
+
+        btnCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent hubungkankelayout = new Intent(getApplicationContext(), Camera.class);
                 startActivity(hubungkankelayout);
             }
         });

@@ -42,6 +42,7 @@
         android:background="@color/white"
         android:drawableLeft="@drawable/baseline_person_24"
         android:textColor="@color/black"
+        android:text="admin"
         />
 
     <EditText
@@ -56,6 +57,7 @@
         android:drawableLeft="@drawable/baseline_key_24"
         android:inputType="textPassword"
         android:textColor="@color/black"
+        android:text="admin"
         />
 
     <Button
