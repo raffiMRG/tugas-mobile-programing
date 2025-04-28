@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,7 +22,9 @@ public class TabLayout extends AppCompatActivity {
 
         Button tab1, tab2;
 
-        LinearLayout view1, view2;
+//        LinearLayout view1, view2;
+        ConstraintLayout view1, view2;
+//        LinearLayout view2;
 
         tab1 = findViewById(R.id.btnTab1);
         tab2 = findViewById(R.id.btnTab2);
