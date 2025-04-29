@@ -3,6 +3,7 @@ package com.example.projectawal_mraffigumilang;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -22,6 +23,7 @@ public class Dashboard extends AppCompatActivity {
 
         Button btnLayout = (Button) findViewById(R.id.btnTabLayout);
         Button btnCamera = (Button) findViewById(R.id.btnCamera);
+        Button btnWebview = (Button) findViewById(R.id.btnWebView);
 
         // Menggunakan Toolbar sebagai AppBar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -47,5 +49,12 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+        btnWebview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent hubungkankelayout = new Intent(getApplicationContext(), WebViewLayout.class);
+                startActivity(hubungkankelayout);
+            }
+        });
     }
 }
