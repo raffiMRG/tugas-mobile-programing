@@ -7,6 +7,7 @@ import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -30,6 +31,13 @@ public class TabLayout extends AppCompatActivity {
         tab2 = findViewById(R.id.btnTab2);
         view1 = findViewById(R.id.tab1);
         view2 = findViewById(R.id.tab2);
+
+        // Menggunakan Toolbar sebagai AppBar
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        // Mengubah title di Toolbar
+        getSupportActionBar().setTitle("06TPLP019 M Raffi Gumilang");
 
         tab1.setOnClickListener(v -> {
             view1.setVisibility(View.VISIBLE);
