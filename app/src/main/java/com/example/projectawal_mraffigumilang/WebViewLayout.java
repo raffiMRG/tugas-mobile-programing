@@ -1,12 +1,15 @@
 package com.example.projectawal_mraffigumilang;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class WebViewLayout extends AppCompatActivity {
 private WebView webView;
@@ -14,13 +17,12 @@ private WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_web_view);
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.statusBarColor));
+        }
 
         webView = findViewById(R.id.webView);
 
@@ -30,7 +32,7 @@ private WebView webView;
         webSettings.setJavaScriptEnabled(true);
 
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://lld.unpam.ac.id/?d=1");
+        webView.loadUrl("https://github.com/raffiMRG");
     }
 
     @Override

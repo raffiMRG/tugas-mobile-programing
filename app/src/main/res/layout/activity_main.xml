@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/example1"
+    android:background="@drawable/background2"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -17,7 +17,8 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:title="Custom AppBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:titleTextColor="@color/black"/>
+        app:titleTextColor="@color/black"
+        android:backgroundTint="@color/colorPrimary"/>
 
     <TextView
         android:id="@+id/title"
@@ -69,6 +70,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginHorizontal="50dp"
         android:gravity="center"
+        android:backgroundTint="@color/colorPrimary"
         />
 
 </RelativeLayout>
