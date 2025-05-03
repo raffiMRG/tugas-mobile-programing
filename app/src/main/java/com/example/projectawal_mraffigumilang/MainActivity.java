@@ -2,14 +2,17 @@ package com.example.projectawal_mraffigumilang;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,12 +24,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        setTitle("My App Title");
-//        getSupportActionBar().setTitle("My App Title");
-        // Mengatur title di ActionBar
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().setTitle("My App Title");
-//        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.statusBarColor));
+        }
+
 
 //        ==============================================
 
@@ -58,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 }
 

@@ -1,8 +1,11 @@
 package com.example.projectawal_mraffigumilang;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -21,6 +24,8 @@ public class TabLayout extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tab_layout);
 
+        ImageView gitub, lindin;
+
         Button tab1, tab2;
 
 //        LinearLayout view1, view2;
@@ -31,6 +36,8 @@ public class TabLayout extends AppCompatActivity {
         tab2 = findViewById(R.id.btnTab2);
         view1 = findViewById(R.id.tab1);
         view2 = findViewById(R.id.tab2);
+        gitub = findViewById(R.id.gitIcon);
+        lindin = findViewById(R.id.linkdinIcon);
 
         // Menggunakan Toolbar sebagai AppBar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -49,6 +56,22 @@ public class TabLayout extends AppCompatActivity {
             view2.setVisibility(View.VISIBLE);
         });
 
+
+        gitub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/raffiMRG"));
+                startActivity(intent);
+            }
+        });
+
+        lindin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://id.linkedin.com/in/raffimrg"));
+                startActivity(intent);
+            }
+        });
 
     }
 }

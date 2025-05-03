@@ -23,11 +23,11 @@
     <Button
         android:id="@+id/btnCamera"
         android:text="AMBIL PHOTO"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/image"
-        android:backgroundTint="@color/grey"
         />
 
 </RelativeLayout>
