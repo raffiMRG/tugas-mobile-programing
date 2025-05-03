@@ -1,4 +1,4 @@
-# CATA GANTI NAMA PROJECT
+# CARA GANTI NAMA PROJECT
 
 1. buka file `settings.gradle.kts` ganti bagian itu
 
